@@ -1,0 +1,1 @@
+This is the first directory experimenting with Python.
