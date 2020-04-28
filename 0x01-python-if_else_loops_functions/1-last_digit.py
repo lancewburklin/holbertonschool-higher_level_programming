@@ -5,6 +5,10 @@ last = number % 10
 stat = "nothing"
 iszero = "nothing"
 
+if number < 0:
+    newnum = -number
+    last = newnum % 10
+
 if last > 5:
     stat = "and is greater than 5"
 elif last < 6:
