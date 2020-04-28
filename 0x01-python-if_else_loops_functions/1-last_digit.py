@@ -7,7 +7,7 @@ iszero = "nothing"
 
 if number < 0:
     newnum = -number
-    last = newnum % 10
+    last = -(newnum % 10)
 
 if last > 5:
     stat = "and is greater than 5"
