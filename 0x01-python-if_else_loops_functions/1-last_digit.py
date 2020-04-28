@@ -11,12 +11,14 @@ if number < 0:
 if last is 0:
     stat = ""
 elif last > 5:
-    stat = " and is greater than 5 "
+    stat = " and is greater than 5"
 elif last < 6:
     stat = " and is less than 6 "
 
 if last is 0:
     iszero = " and is 0"
+elif last > 5:
+    iszero = ""
 else:
     iszero = "and not 0"
 
