@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-for n in range(0, 10):
-    for i in range(0, 10):
-        if i == 9 and n == 9:
-            print("{:d}{:d}".format(n, i), end="\n")
-        else:
-            print("{:d}{:d}".format(n, i), end=", ")
+x = False
+for i in range(0, 100):
+    if i == 99:
+        x = True
+    if i < 10:
+        print("{:d}".format(0), end="")
+    if i != 100:
+        print("{:d}{:s}{:s}".format(i, "" if x else ",", "\n" if x else " "), end="")
