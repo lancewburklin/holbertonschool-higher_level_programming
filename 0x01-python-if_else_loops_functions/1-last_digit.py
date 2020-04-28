@@ -8,17 +8,16 @@ iszero = "nothing"
 if number < 0:
     newnum = -number
     last = -(newnum % 10)
-
-if last > 5:
-    stat = "and is greater than 5"
+if last is 0:
+    stat = ""
+elif last > 5:
+    stat = " and is greater than 5 "
 elif last < 6:
-    stat = "and is less than 6"
-else:
-    stat = "is 0"
+    stat = " and is less than 6 "
 
 if last is 0:
-    iszero = "and is 0"
+    iszero = " and is 0"
 else:
     iszero = "and not 0"
 
-print("Last digit of {:d} is {:d} {} {}".format(number, last, stat, iszero))
+print("Last digit of {:d} is {:d}{}{}".format(number, last, stat, iszero))
