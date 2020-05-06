@@ -9,5 +9,5 @@ def print_matrix_integer(matrix=[[]]):
                     elend = "\n"
                 print("{:d}".format(matrix[i][x]), end=elend)
                 flag = True
-    if flag == False:
+    if flag is False:
         print("")
