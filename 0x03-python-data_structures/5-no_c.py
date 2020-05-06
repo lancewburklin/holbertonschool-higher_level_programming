@@ -6,4 +6,4 @@ def no_c(my_string):
             if ord(my_string[i]) == 99 or ord(my_string[i]) == 67:
                 new_string.remove(my_string[i])
         my_string = "".join(new_string)
-        return (my_string)
+    return (my_string)
