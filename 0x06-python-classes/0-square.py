@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 class Square:
-    pass
+    """This square is an object"""
