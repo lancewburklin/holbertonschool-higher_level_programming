@@ -2,5 +2,6 @@
 
 """Creating an empty class"""
 
+
 class Square:
     """This square is an object"""
