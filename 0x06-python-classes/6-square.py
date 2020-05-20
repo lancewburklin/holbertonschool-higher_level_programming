@@ -39,8 +39,11 @@ class Square:
         """Sets the position of the square"""
         elerror = 'position must be a tuple of 2 positive integers'
         if type(value) is tuple and len(value) == 2:
-            if (value[0] >= 0 and value[1] >= 0):
-                self.__position = value
+            if (isinstance(value[0], int), isinstance(value[1], int)):
+                if (value[0] >= 0 and value[1] >= 0):
+                    self.__position = value
+                else:
+                    raise TypeError(elerror)
             else:
                 raise TypeError(elerror)
         else:
@@ -56,12 +59,12 @@ class Square:
         i = 0
         n = 0
         x = 0
-        while x < self.__position[1]:
-            print("")
-            x += 1
         if numMax == 0:
             print("")
             return
+        while x < self.__position[1]:
+            print()
+            x += 1
         while i < numMax:
             n = 0
             print(" " * self.__position[0], end="")
