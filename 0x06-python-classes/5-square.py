@@ -36,6 +36,9 @@ class Square:
         numMax = self.__size
         i = 0
         n = 0
+        if numMax == 0:
+            print("")
+            return
         while i < numMax:
             n = 0
             while n < numMax:
