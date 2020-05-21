@@ -1,0 +1,22 @@
+>>> findAdd = __import__('0-add_integer').add_integer
+>>> findAdd(1, 1)
+2
+>>> findAdd(100.3, -2)
+98
+>>> findAdd(1, "STRING")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> findAdd("STRING", 0)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> findAdd(100.3, 100.3)
+200
+>>> findAdd(-3, -3)
+-6
+>>> findAdd(True, 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> findAdd(-100.3, -100.3)
+-200
+>>> findAdd(7, 7)
+14
