@@ -1,0 +1,21 @@
+>>> print_text = __import__('5-text_indentation').text_indentation
+>>> print_text(1)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> print_text(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> print_text(" This:        is?      a test")
+This:
+<BLANKLINE>
+is?
+<BLANKLINE>
+a test
+>>> print_text("        ")
+>>> print_text("      Test:")
+Test:
+<BLANKLINE>
