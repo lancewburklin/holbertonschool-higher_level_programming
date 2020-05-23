@@ -73,3 +73,25 @@ class testMax(unittest.TestCase):
         """Test twelve for max_int"""
         list_12 = [1, 1]
         self.assertAlmostEqual(max_integer(list_12), 1)
+
+    def test_thirteen(self):
+        """Test number thirteen"""
+        list_13 = ["test", "testit", "testitCheese"]
+        self.assertEqual(max_integer(list_13), "testitCheese")
+
+    def test_fourteen(self):
+        """Test number fourteen"""
+        list_14 = "TEST"
+        self.assertEqual(max_integer(list_14), 'T')
+
+    def test_15(self):
+        """Test number 15"""
+        b = float("inf")
+        list_15 = [2, 4, 6, b]
+        self.assertEqual(max_integer(list_15), b)
+
+    def test_16(self):
+        """Test number 16"""
+        b = float("nan")
+        list_16 = [2, 4, 6, b]
+        self.assertAlmostEqual(max_integer(list_16), 6)
