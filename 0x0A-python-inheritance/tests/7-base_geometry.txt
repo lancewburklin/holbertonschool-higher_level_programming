@@ -1,0 +1,15 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("HI", 1)
+>>> bg.integer_validator("NOPE", 4.2)
+Traceback (most recent call last):
+TypeError: NOPE must be an integer
+>>> bg.integer_validator("Cheese", 0)
+Traceback (most recent call last):
+ValueError: Cheese must be greater than 0
+>>> bg.integer_validator("KitKat", "Nah")
+Traceback (most recent call last):
+TypeError: KitKat must be an integer
+>>> bg.integer_validator("Pineapple", -5)
+Traceback (most recent call last):
+ValueError: Pineapple must be greater than 0
