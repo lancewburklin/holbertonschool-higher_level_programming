@@ -5,6 +5,7 @@ Rads n lines of a file
 
 
 def read_lines(filename="", nb_lines=0):
+    """Reading lines"""
     num_lines = 0
     with open(filename, encoding='utf-8') as a_file:
         if nb_lines <= 0:
