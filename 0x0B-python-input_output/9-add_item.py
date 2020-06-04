@@ -13,13 +13,9 @@ args = sys.argv
 args = list(args)
 del args[0]
 
-with open('add_item.json', mode='a', encoding='utf-8') as a_file:
-    try:
-        old_args = load_from_file('add_item.json')
-        if old_args != []:
-            args = old_args + args
-        save_to_file(args, 'add_item.json')
-        a_file.write('\n')
-    except:
-        save_to_file(args, 'add_item.json')
-        a_file.write('\n')
+try:
+    a_fie = load_from_file('add_item.json')
+except:
+    a_file = []
+items = a_file + args
+save_to_file(items, 'add_item.json')
