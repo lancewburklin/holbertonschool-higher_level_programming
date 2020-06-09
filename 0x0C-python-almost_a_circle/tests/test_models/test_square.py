@@ -39,3 +39,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(str(s1), "[Square] (2) 2/2 - 12")
         with self.assertRaises(ValueError):
             s1.update(size=-5)
+
+    def test_14(self):
+        """Test 14"""
+        s1 = Square(10, 2, 1)
+        s1_dict = s1.to_dictionary()
+        self.assertTrue(type(s1_dict) == dict)
