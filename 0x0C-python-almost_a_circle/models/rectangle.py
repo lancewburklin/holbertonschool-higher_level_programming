@@ -113,3 +113,9 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if len(args) < 5 and 'y' in kwargs.keys():
                 self.__y = kwargs['y']
+
+    def to_dictionary(self):
+        """Gets the square as a dictionary"""
+        dictio = {'id': self.id, 'width': self.__width, 'height': self.__height,
+                  'x': self.__x, 'y': self.__y}
+        return dictio
