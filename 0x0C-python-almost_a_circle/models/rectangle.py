@@ -116,6 +116,6 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Gets the square as a dictionary"""
-        dictio = {'id': self.id, 'width': self.__width, 'height': self.__height,
-                  'x': self.__x, 'y': self.__y}
+        dictio = {'id': self.id, 'width': self.__width,
+                  'height': self.__height, 'x': self.__x, 'y': self.__y}
         return dictio
