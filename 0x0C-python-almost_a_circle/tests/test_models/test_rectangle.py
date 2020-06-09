@@ -45,3 +45,33 @@ class testRectangle(unittest.TestCase):
         self.assertAlmostEqual(r2.area(), 20)
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertAlmostEqual(r3.area(), 56)
+
+    def test_6(self):
+        """Tests for problem 6"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        pr1 = str(r1)
+        self.assertEqual(pr1, "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_8(self):
+        """Tests for problem 8"""
+        r1 = Rectangle(10, 10, 10, 10, 10)
+        pr1 = str(r1)
+        self.assertEqual(pr1, "[Rectangle] (10) 10/10 - 10/10")
+        r1.update(7)
+        pr1 = str(r1)
+        self.assertEqual(pr1, "[Rectangle] (7) 10/10 - 10/10")
+        r1.update(13, 13, 7, 6, 2)
+        pr1 = str(r1)
+        self.assertEqual(pr1, "[Rectangle] (13) 6/2 - 13/7")
+
+    def test_9(self):
+        """Test for problem 9"""
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(2, 2, 2, 2, 2)
+        self.assertEqual(str(r1), "[Rectangle] (2) 2/2 - 2/2")
+        r1.update(id=3)
+        self.assertEqual(str(r1), "[Rectangle] (3) 2/2 - 2/2")
+        r1.update(7, id=3)
+        self.assertEqual(str(r1), "[Rectangle] (7) 2/2 - 2/2")
+        r1.update(id=9, x=9, y=9, width=9, height=9)
+        self.assertEqual(str(r1), "[Rectangle] (9) 9/9 - 9/9")
