@@ -50,3 +50,8 @@ class Square(Rectangle):
                 self.x = kwargs['x']
             if len(args) < 4 and 'y' in kwargs.keys():
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """Square to dictionary"""
+        dictio = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+        return dictio
