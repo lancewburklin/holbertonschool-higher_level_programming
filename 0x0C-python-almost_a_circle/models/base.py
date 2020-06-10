@@ -35,3 +35,10 @@ class Base:
         the_list = Base.to_json_string(the_list)
         with open("{}.json".format(cls.__name__), mode='w') as f:
             f.write(str(the_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Changes it over"""
+        if json_string is None:
+            return []
+        return json.loads(json_string)
