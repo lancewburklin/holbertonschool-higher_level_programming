@@ -2,6 +2,7 @@
 """
 Creating the Base class
 """
+import json
 
 
 class Base:
@@ -15,3 +16,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Gets a dictionary and converts it to string"""
+        if not list_dictionaries or list_dictionaries == None:
+            return "\"[]\""
+        return json.dumps(list_dictionaries)
