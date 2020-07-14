@@ -1,0 +1,1 @@
+Working with users and user permissions in mysql. Also working with joins.
