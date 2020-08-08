@@ -18,5 +18,6 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.query(State).filter(State.id == 2).update({State.name:"New Mexico"})
+    session.query(State).filter(State.id == 2).update(
+        {State.name: "New Mexico"})
     session.commit()
