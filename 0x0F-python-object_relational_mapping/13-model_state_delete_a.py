@@ -18,8 +18,8 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
     Session = sessionmaker(bind=engine)
     session = Session()
-    things = session.query(State).all()
+    things = session.query(State).filter(State.name.like('%a%'))
     for stuff in things:
         if 'a' in stuff.name:
-            session.query(State).filter(State.name == stuff.name).delete()
+            session.delete(stuff)
     session.commit()
