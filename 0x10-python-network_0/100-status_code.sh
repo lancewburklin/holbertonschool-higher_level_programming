@@ -1,3 +1,3 @@
 #!/bin/bash
 # Get the status code of a website
-curl -sI "$1" | head -n 1 | cut -b 10-12
+curl -X GET -sLIw "%{http_code}\n" 0.0.0.0:5000/nop -o /dev/null
