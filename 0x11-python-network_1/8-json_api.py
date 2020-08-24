@@ -17,6 +17,6 @@ if __name__ == "__main__":
             print("No result")
         else:
             derulo = thing.json()
-            print("[{}] [{}]".format(derulo.get("id"), derulo.get("name")))
+            print("[{}] {}".format(derulo.get("id"), derulo.get("name")))
     except:
         print("Not a valid JSON")
