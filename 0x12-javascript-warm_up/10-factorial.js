@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function findFactorial (mult, num) {
-  if (mult > 0) {
+  if (mult != 0) {
     findFactorial(mult - 1, num * mult);
   } else {
     console.log(num);
