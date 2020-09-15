@@ -11,6 +11,9 @@ function findLargest (index) {
       y = x;
       x = parseInt(args[i]);
     }
+    if (y < parseInt(args[i]) && x !== parseInt(args[i])) {
+      y = parseInt(args[i]);
+    }
     if (i + 1 === args.length) {
       if (x !== y && index === 2) {
         return (y);
@@ -21,11 +24,7 @@ function findLargest (index) {
       }
     }
   }
-  if (parseInt(args[2]) === parseInt(args[args.len - 1])) {
-    return (x);
-  } else {
-    return (y);
-  }
+  return (x);
 }
 
 const args = process.argv;
