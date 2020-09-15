@@ -1,5 +1,8 @@
 #!/usr/bin/node
 function findFactorial (mult, num) {
+  if (mult < 1) {
+    return (num);
+  }
   return (findFactorial(mult - 1, num * mult));
 }
 if (isNaN(parseInt(process.argv[2]))) {
