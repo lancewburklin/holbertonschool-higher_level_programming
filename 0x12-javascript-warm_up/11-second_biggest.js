@@ -18,16 +18,17 @@ function findLargest (index) {
       }
     }
   }
-  return (x);
+  if (parseInt(args[2]) === parseInt(args[args.len - 1])) {
+      return (x);
+  } else {
+    return (y);
+  }
 }
 
 const args = process.argv;
 if (args.length < 4) {
   console.log(0);
 } else {
-  if (parseInt(args[2]) === parseInt(args[args.length - 1])) {
-    process.argv[args.length - 1] = -99999999999999999999;
-  }
   const res = findLargest(2);
   console.log(res);
 }
