@@ -19,7 +19,7 @@ function findLargest (index) {
     }
   }
   if (parseInt(args[2]) === parseInt(args[args.len - 1])) {
-      return (x);
+    return (x);
   } else {
     return (y);
   }
