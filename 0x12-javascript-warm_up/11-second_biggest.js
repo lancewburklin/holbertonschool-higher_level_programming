@@ -4,6 +4,9 @@ function findLargest (index) {
   let x = parseInt(args[index]);
   let y = parseInt(args[index]);
   for (let i = index; i < args.length; i++) {
+    if (isNaN(parseInt(args[i]))) {
+      return (parseInt(args[i]));
+    }
     if (x < parseInt(args[i])) {
       y = x;
       x = parseInt(args[i]);
