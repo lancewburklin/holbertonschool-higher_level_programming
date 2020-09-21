@@ -5,7 +5,8 @@ exports.esrever = function (list) {
   for (let aList = []; idx >= 0; idx--, n++) {
     aList[n] = list[idx];
     if (idx === 0) {
-      return (aList);
+      list = aList;
+      return (list);
     }
   }
 };
