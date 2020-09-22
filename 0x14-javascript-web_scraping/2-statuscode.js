@@ -3,5 +3,9 @@ const request = require('request');
 const local = process.argv[2];
 
 request(local, function (error, response, body) {
-  console.log("code: " + response.statusCode);
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('code: ' + response.statusCode);
+  }
 });
